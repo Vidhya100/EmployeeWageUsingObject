@@ -10,6 +10,8 @@ namespace EmployeeWageUsingObject
     {
         public void CheckEmployeeAttendence()
         {
+
+            //Constants
             const int IS_FULL_TIME = 1;
             const int IS_PART_TIME = 2;
             int WAGE_PER_HOUR = 20;
