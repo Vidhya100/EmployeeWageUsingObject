@@ -8,8 +8,8 @@ namespace EmployeeWageComputation
         {
             Console.WriteLine("Welcome to Employeewage program.");
 
-            //CheckEmployee checkEployee = new CheckEmployee();
-            //checkEployee.CheckEmployeeAttendence();
+            CheckEmployee checkEployee = new CheckEmployee();
+            checkEployee.CheckEmployeeAttendence();
 
             UsingSwitch usingSwitch = new UsingSwitch();
             usingSwitch.CheckEmployeeAttendence();
