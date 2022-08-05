@@ -8,11 +8,9 @@ namespace EmployeeWageComputation
         {
             Console.WriteLine("Welcome to Employeewage program.");
 
-            CheckEmployee checkEployee = new CheckEmployee();
+            Refractor checkEployee = new Refractor();
+            checkEployee.CalculateWages();
             checkEployee.CheckEmployeeAttendence();
-
-            UsingSwitch usingSwitch = new UsingSwitch();
-            usingSwitch.CheckEmployeeAttendence();
         }
     }
 }
