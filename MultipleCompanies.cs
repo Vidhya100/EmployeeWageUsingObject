@@ -10,11 +10,26 @@ namespace EmployeeWageUsingObject
     {
         public const int IS_PART_TIME = 1;
         public const int IS_FUL_TIME = 2;
-        public static int ComputeEmpWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
+
+        private string company;
+        private int empRatePerHour;
+        private int numOfWorkingDays;
+        private int maxHoursPerMonth;
+        private int totalEmpWage;
+
+        public MultipleCompanies(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
+        {
+            this.company = company;
+            this.empRatePerHour = empRatePerHour;
+            this.numOfWorkingDays = numOfWorkingDays;
+            this.maxHoursPerMonth = maxHoursPerMonth;
+        }
+
+        public void ComputeEmpWage()
         {
             int empHrs = 0, totalHr = 0, totalWorkingDays = 0;
 
-            while (totalHr <= maxHoursPerMonth && totalWorkingDays < numOfWorkingDays)
+            while (totalHr <= this.maxHoursPerMonth && totalWorkingDays < this.numOfWorkingDays)
             {
                 totalWorkingDays++;
                 Random random = new Random();
@@ -37,7 +52,11 @@ namespace EmployeeWageUsingObject
             }
             int totalEmpWage = totalHr * empRatePerHour;
             Console.WriteLine("Total Employee wage for company:{0} is {1}", company, totalEmpWage);
-            return totalEmpWage;
+                        
+        }
+        public string toString()
+        {
+            return "Total Emp Wage for company: " + this.company + "is: " + this.totalEmpWage ;
         }
     }
 }
