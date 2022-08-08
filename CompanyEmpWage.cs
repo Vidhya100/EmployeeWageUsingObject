@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace EmployeeWageUsingObject
 {
+    public interface IEmployee
+    {
+        public void addCompanyEmpWage(string company, int empRatePerHour, int numOfWorkingdays, int maxHoursPerMonth);
+        public void computeEmpWage();
+
+    }
     public class CompanyEmpWage
     {
         public string company;
@@ -29,7 +35,7 @@ namespace EmployeeWageUsingObject
 
         public string toString()
         {
-            return "Total Emp Wage for company: " + this.company + "is: " + this.totalEmpWage;
+            return "Total Emp Wage for company: " + this.company + " is: " + this.totalEmpWage;
         }
     }
 
