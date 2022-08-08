@@ -8,14 +8,19 @@ namespace EmployeeWageComputation
         {
             Console.WriteLine("Welcome to Employeewage program.");
 
-            MultipleCompanies dMart = new MultipleCompanies("Dmart", 20, 2, 10);
-            MultipleCompanies reliance = new MultipleCompanies("Reliance", 10, 4, 20);
+            EmpWageBuilderArray empWageBuilder = new EmpWageBuilderArray();
 
-            dMart.ComputeEmpWage();
-            Console.WriteLine(dMart.ToString());
+            empWageBuilder.addCompanyEmpWage("Dmart", 20, 2, 10);
+            empWageBuilder.addCompanyEmpWage("Reliance", 10, 4, 20);
+            empWageBuilder.computeEmpWage();
+            //EmpWageBuilder dMart = new EmpWageBuilder("Dmart", 20, 2, 10);
+            //EmpWageBuilder reliance = new EmpWageBuilder("Reliance", 10, 4, 20);
 
-            reliance.ComputeEmpWage();
-            Console.WriteLine(reliance.ToString());
+            //dMart.ComputeEmpWage();
+            //Console.WriteLine(dMart.ToString());
+
+            //reliance.ComputeEmpWage();
+            //Console.WriteLine(reliance.ToString());
         }
     }
 }
